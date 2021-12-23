@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game</title>
+    <link rel="stylesheet" href="static/game1.css">
+</head>
+<style>
+canvas {
+    position: fixed;
+    border: 3px solid blue;
+    background-color: black;
+}
+</style>
+<body onload="startGame()">
+<script>
+var playerSize = 5
+var playerX = 50
+var playerY = 300
+var speed = 2.5
+var playerX2 = 950
+let snake = []
+let snake2 = []
+
+function startGame() {
+    myGameArea.start();
+    headSnake = new component(playerSize,playerSize, "red", playerX,playerY)
+    headSnake2 = new component(playerSize,playerSize, "green", playerX2,playerY)
+}
+
+var myGameArea = {
+    canvas : document.createElement("canvas"),
+    start : function() {
+        this.canvas.width = 1000;
+        this.canvas.height = 600;
+        this.context = this.canvas.getContext("2d");
+        document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+        this.frameNo = 0;
+        this.interval = setInterval(updateGameArea, 20);
+        window.addEventListener('keydown', function (e) {
+            e.preventDefault();
+            myGameArea.keys = (myGameArea.keys || []);
+            myGameArea.keys[e.keyCode] = (e.type == "keydown");
+        })
+        window.addEventListener('keyup', function (e) {
+            myGameArea.keys[e.keyCode] = (e.type == "keydown");
+        })
+    },
+    stop : function() {
+        clearInterval(this.interval);
+    },    
+    clear : function() {
+        this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    }
+}
+
+function component(width, height, color, x, y) {
+    this.width = width;
+    this.height = height;
+    this.speedX = 0;
+    this.speedY = 0;
+    this.x = x;
+    this.y = y;    
+    this.update = function() {
+        ctx = myGameArea.context;
+        ctx.fillStyle = color;
+        ctx.fillRect(this.x, this.y, this.width, this.height);
+    }
+    this.newPos = function() {
+        this.x += this.speedX;
+        this.y += this.speedY;        
+    }
+}
+
+function moveup() {
+    headSnake.speedY = -speed;
+    headSnake.speedX = 0; 
+}
+
+function movedown() {
+    headSnake.speedY = speed;
+    headSnake.speedX = 0; 
+}
+
+function moveleft() {
+    headSnake.speedX = -speed;
+    headSnake.speedY = 0;  
+}
+
+function moveright() {
+    headSnake.speedX = speed;
+    headSnake.speedY = 0; 
+}
+
+function moveup2() {
+    headSnake2.speedY = -speed;
+    headSnake2.speedX = 0; 
+}
+
+function movedown2() {
+    headSnake2.speedY = speed;
+    headSnake2.speedX = 0; 
+}
+
+function moveleft2() {
+    headSnake2.speedX = -speed;
+    headSnake2.speedY = 0;  
+}
+
+function moveright2() {
+    headSnake2.speedX = speed;
+    headSnake2.speedY = 0; 
+}
+
+function updateGameArea() {
+  //myGameArea.clear();//
+    if (myGameArea.keys && myGameArea.keys[87]) { moveup() }
+    if (myGameArea.keys && myGameArea.keys[83]) { movedown() }
+    if (myGameArea.keys && myGameArea.keys[65]) { moveleft() }
+    if (myGameArea.keys && myGameArea.keys[68]) { moveright() }
+    if (myGameArea.keys && myGameArea.keys[38]) { moveup2() }
+    if (myGameArea.keys && myGameArea.keys[40]) { movedown2() }
+    if (myGameArea.keys && myGameArea.keys[37]) { moveleft2() }
+    if (myGameArea.keys && myGameArea.keys[39]) { moveright2() }
+    headSnake.newPos();    
+    headSnake.update();
+    headSnake2.newPos();    
+    headSnake2.update();
+}
+
+</script>
+
+</body>
+</html>
+</html>

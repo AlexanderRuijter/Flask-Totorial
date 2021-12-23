@@ -1,0 +1,77 @@
+<!doctype html>
+<head>
+  <title> MainPage </title>
+  <link href="/static/style.css" rel="stylesheet" type="text/css">
+</head>
+<div class="container">
+    <h1>HomePage</h1>
+  </div>
+<div class="game-selection">
+  <div class="tab">
+      <button class="button" onclick="open(event, "Game3")"> Game3 </button>
+  </div>
+</div>
+  
+<input type="radio" id="tab-welcome" name="mytabs">
+<button class="button" onclick="open(event, "Game1")"> Game1 </button>
+<div id="Welcome-tab" class="tab"> 
+  <label class="Welcome"> Hello {{username}}, Welcome to the main page </label>
+  <h1> I'm so happy you look at me right now do it again some time </h1>
+
+  </div>
+</div>
+
+<input type="radio" id="tab-1" name="mytabs">
+<button class="button" onclick="open(event, "Game2")"> Game2 </button>
+<div id="Game1" class="tab"> 
+  <label class="Welcome">{{username}} If your ready lets go </label>
+  <h1> Theres a lot to explore </h1>
+
+  </div>
+</div>
+
+<input type="radio" id="tab-2" name="mytabs">
+      <button class="button" onclick="open(event, "Game3")"> Game3 </button>
+<div id="Game2" class="tab"> 
+  <label class="Welcome"> Ehm {{username}} its time again </label>
+  <h1> I hope you can forgive me for last <time> </h1>
+
+  </div>
+</div>
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+</body>
+<div class="landscape">
+    <div class="l_Background">
+      <div class="l_hill hill1"></div>
+      <div class="l_hill hill2"></div>
+      <div class="l_hill hill3"></div>
+      <div class="l_hill hill4"></div>
+      <div class="l_hill hill5"></div>
+      <div class="l_hill hill6"></div>
+      <div class="l_hill hill7"></div>
+      <div class="l_hill hill8"></div>
+      <div class="l_hill hill9"></div>
+      <div class="l_hill hill10"></div>
+      <div class="l_hill hill11"></div>
+      <div class="l_hill hill12"></div>
+      <div class="l_hill hill13"></div>
+      <div class="l_hill hill14"></div>
+      <div class="l_hill hill15"></div>
+      <div class="l_hill hill16"></div>
+      </div>
+    </div>
+  </div>

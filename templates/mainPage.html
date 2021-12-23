@@ -1,0 +1,53 @@
+<!doctype html>
+<head>
+  <title> MainPage </title>
+  <link href="/static/style.css" rel="stylesheet" type="text/css">
+</head>
+<div class="container">
+    <h1>Welcome to the main page</h1>
+  </div>
+<body class="bodyM">
+  {%if loginCheck == True %}
+    <label> Hello {{username}}, Welcome to the main page </label>
+  {% else %}
+  <br><br><br>
+
+    <h3> You have to login to open this page</h3>
+    <a class="register" href="https://my-amazing-website.noobpower9000.repl.co/login/"> Register here</a>
+  {% endif %}
+  <p>
+  {% for smash in smashs %}
+
+    {{smash}}
+
+  {% endfor %}
+  <p> 
+  <div class="landscape">
+    <div class="l_Background">
+      <div class="l_hill hill1"></div>
+      <div class="l_hill hill2"></div>
+      <div class="l_hill hill3"></div>
+      <div class="l_hill hill4"></div>
+      <div class="l_hill hill5"></div>
+      <div class="l_hill hill6"></div>
+      <div class="l_hill hill7"></div>
+      <div class="l_hill hill8"></div>
+      <div class="l_hill hill9"></div>
+      <div class="l_hill hill10"></div>
+      <div class="l_hill hill11"></div>
+      <div class="l_hill hill12"></div>
+      <div class="l_hill hill13"></div>
+      <div class="l_hill hill14"></div>
+      <div class="l_hill hill15"></div>
+      <div class="l_hill hill16"></div>
+      <div class="river">
+       <div class="watereffect"></div>
+       <div class="watereffect1"></div>
+       <div class="watereffect2"></div>
+       <div class="watereffect3"></div>
+       <div class="watereffect4"></div>
+       
+      </div>
+    </div>
+  </div>
+</body>

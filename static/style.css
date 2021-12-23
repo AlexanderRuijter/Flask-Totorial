@@ -1,3 +1,434 @@
-p {
-  color: red;
+.container {
+  background-color: greenyellow;
+  color: greenyellow;
+  height: 5pc;
+  width: 101%;
+  border: 2px solid black;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 100;
+  margin-left: -10px;
+  margin-top: -1.1em;
 }
+
+.register {
+  background-color: green;
+  border: 0.15em black solid;
+  height: 1em;
+  width: 10em;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  text-align: center;
+  display: flex;
+  margin-left: 33%;
+}
+
+.game-selection{
+  background-color: darkgreen;
+  border: 0.15em black solid;
+  height: 1.5em;
+  width: 100.70%;
+  margin-left: -10px;
+  margin-top: -0.15em;
+  position: relative;
+  justify-content: last;
+}
+
+
+.register:hover{
+  animation-name: hoverAnim;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes hoverAnim{
+  0% {
+    background-color: lightgreen;
+    border: 0.15em black solid;
+    transform: rotate(0);
+  }
+  25% {
+  background-color: yellow;
+
+  }
+  50% {
+  background-color: blue;
+  border: 0.3em green solid;
+  }
+  75% {
+  background-color: pink;
+  }
+  100% {
+    background-color: lightgreen;
+    border: 0.15em black solid;
+    transform: rotate(360deg);
+  }
+}
+
+.landscape {
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 30%;
+  margin-top: 44%;
+  
+}
+.l_Background {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  width: 130em;
+  height: 200px;
+  background-color: green;
+  z-index: 10;
+  margin-left: -10px;
+}
+
+@keyframes wave{
+  0% {
+    transform: translate3d(0,0,0);
+  }
+
+  100%{
+    transform: translate3d(1000px,0,0);
+  }
+}
+
+
+.Welcome {
+  color: green;
+}
+
+.river {
+  display: block;
+  position: fixed;
+  background-color: blue;
+  width: 130em;
+  height: 100px;
+  z-index: 11;
+  margin-top: 0px;
+}
+
+.l_hill {
+  position: fixed;
+  display: inline-block;
+  border-radius: 50%;
+  width: 150px;
+  height: 250px;
+  background-color: green;
+  border: 2px solid black;
+  transform: rotate(90deg);
+
+}
+
+
+h1 {
+  border-top: red;
+  color: darkgreen;
+  text-align: center;
+  text-size-adjust: 100px;
+}
+
+p {
+  color: greenyellow;
+  text-align: center;
+}
+
+ul {
+  color: orange;
+  text-align: center;
+}
+
+h3 {
+  color: green;
+  text-align: center;
+}
+
+label {
+  color: darkgreen;
+  font-size: larger;
+}
+
+.login {
+  background: lightgreen;
+  color: green;
+  width: 300px;
+  height: 50rem;
+  border: 2px solid black;
+  position: fixed;
+  z-index: 60;
+  justify-content: center;
+  margin-top: 3%;
+}
+
+a {
+  color: black;
+  font-size: larger;
+  position:absolute;
+  text-align:center;
+  width:80%;
+  left:10%;
+}
+
+
+
+@keyframes fade {
+from{ opacity: 1;}
+to{opacity: 0,25}
+}
+
+@keyframes IlegalSize{
+0% { transform: scale(1); }
+50% { transform: scale(0.01)}
+100% {transform: scale(1)}
+}
+
+@keyframes moveAnimationY{
+  0% {transform: translateY(0em)}
+  50% {transform: translateY(10em)}
+  100% {transform: translateY(0em)}
+}
+
+@keyframes moveAnimationX{
+  0% {transform: translateX(0em)}
+  50% {transform: translateX(10em)}
+  100% {transform: translateX(0em)}
+}
+
+@keyframes waterEffectX{
+  from {transform: translateX(-2em)}
+  to {transform: translateX(130em)}
+}
+
+@keyframes IlegalMoveAnimation{
+  0% { transform: translate(0)}
+  25% {transform: translate(-30%, 150%)}
+  50% {transform: translate(50%, 0%)}
+  75% {transform: translate(30%, -150%)}
+  100% { transform: translate(0)}
+
+}
+
+@keyframes backgroundColorPalette {
+  0% {
+    background: yellow;
+  }
+  25% {
+    background: greenyellow;
+  }
+  50% {
+    background: lightgreen;
+  }
+  75% {
+    background: green;
+  }
+  100% {
+    background: darkgreen;
+  }
+}
+@keyframes backgroundColorRainbow {
+  0% {
+    background: red;
+  }
+  25% {
+    background:orange;
+  }
+  50% {
+    background: yellow;
+  }
+  75% {
+    background: purple;
+  }
+  100% {
+    background: blue;
+  }
+}
+
+@keyframes backgroundAnimation{
+  0% {transform: translateX(0em)}
+  100% {transform: translateX(130em)}
+}
+
+body{
+  background-color: lightskyblue;
+  background-size: cover;
+  position: relative;
+
+}
+
+.bodyM:hover {
+  animation-name            :backgroundColorPalette;
+  animation-duration        :2s        ;
+  animation-iteration-count :infinite  ;
+  animation-direction       :alternate ;
+}
+
+div.RandomBox{
+  background-color: red;
+  animation-name            : IlegalMoveAnimation, IlegalSize;
+  animation-duration        : 2s         , 1s;
+  animation-iteration-count : infinite  , infinite;
+  animation-direction       : alternate , alternate;
+}
+
+div.RandomBoxOne{
+  background-color: blue;
+  animation-name            : IlegalMoveAnimation;
+  animation-duration        : 2s        ;
+  animation-iteration-count : infinite  ;
+  animation-direction       : alternate ;
+}
+
+div.RandomBoxTwo{
+  animation-name            : backgroundColorRainbow;
+  animation-duration        : 2s        ;
+  animation-iteration-count : infinite  ;
+  animation-direction       : alternate ;
+}
+
+.watereffect {
+  background-color: darkblue;
+  height: 2px;
+  width: 100px;
+  margin-top: 10px;
+  margin-left: -100px;
+  animation: waterEffectX 10s linear infinite;
+}
+
+.watereffect1 {
+  background-color: darkblue;
+  height: 2px;
+  width: 100px;
+  margin-top: 5px;
+  margin-left: -100px;
+  animation: waterEffectX 10s linear infinite;
+  animation-delay: 2s;
+}
+
+.watereffect2 {
+  background-color: darkblue;
+  height: 2px;
+  width: 100px;
+  margin-top: 25px;
+  margin-left: -100px;
+  animation: waterEffectX 10s linear infinite;
+  animation-delay: 4s;
+}
+
+.watereffect3 {
+  background-color: darkblue;
+  height: 2px;
+  width: 100px;
+  margin-top: 20px;
+  margin-left: -100px;
+  animation: waterEffectX 10s linear infinite;
+  animation-delay: 6s;
+}
+
+.watereffect4 {
+  background-color: darkblue;
+  height: 2px;
+  width: 100px;
+  margin-top: 15px;
+  margin-left: -100px;
+  animation: waterEffectX 10s linear infinite;
+  animation-delay: 8s;
+}
+
+.hill1 {
+  margin-left: -10px;
+  margin-top: -100px;
+  z-index: -9;
+}
+.hill2 {
+  height: -90px;
+  width: -90px;
+  margin-left: 100px;
+  margin-top: -100px;
+  z-index: -10;
+}
+.hill3 {
+  margin-left: 225px;
+  margin-top: -100px;
+  z-index: -9;
+}
+.hill4 {
+  margin-left: 350px;
+  margin-top: -100px;
+  z-index: -10;
+}
+
+.hill5 {
+  margin-left: 475px;
+  margin-top: -100px;
+  z-index: -9;
+}
+
+.hill6 {
+  margin-left: 600px;
+  margin-top: -100px;
+  z-index: -10;
+}
+
+.hill7 {
+  margin-left: 725px;
+  margin-top: -100px;
+  z-index: -9;
+}
+.hill8 {
+  margin-left: 850px;
+  margin-top: -100px;
+  z-index: -10;
+}
+.hill9 {
+  margin-left: 975px;
+  margin-top: -100px;
+  z-index: -9;
+}
+.hill10 {
+  margin-left: 1100px;
+  margin-top: -100px;
+  z-index: -10;
+}
+
+.hill11 {
+  margin-left: 1225px;
+  margin-top: -100px;
+  z-index: -9;
+}
+
+.hill12 {
+  margin-left: 1350px;
+  margin-top: -100px;
+  z-index: -10;
+}
+
+.hill13 {
+  margin-left: 1475px;
+  margin-top: -100px;
+  z-index: -9;
+}
+
+.hill14 {
+  margin-left: 1600px;
+  margin-top: -100px;
+  z-index: -10;
+}
+
+.hill15 {
+  margin-left: 1725px;
+  margin-top: -100px;
+  z-index: -9;
+}
+
+.hill16 {
+  margin-left: 1850px;
+  margin-top: -100px;
+  z-index: -10;
+}
+// animatie tips: https://webplatform.github.io/docs/tutorials/css_animations/ 

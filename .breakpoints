@@ -3,9 +3,33 @@
     "requirements.txt": [
       {
         "id": "2961ea9b-ba0c-418a-a98c-686d2a6c79a6",
-        "line": 76,
-        "version": 1,
-        "index": 1329
+        "line": 1,
+        "version": 4,
+        "index": 0
+      }
+    ],
+    "static/style.css": [
+      {
+        "id": "1612843b-24bb-4d29-a629-bc6ac15d6248",
+        "line": 1,
+        "version": 11697,
+        "index": 0
+      }
+    ],
+    "templates/homePage.html": [
+      {
+        "id": "4e32a4bc-cef7-4a82-81da-0af74ebe5bad",
+        "line": 23,
+        "version": 1385,
+        "index": 655
+      }
+    ],
+    "templates/shop.html": [
+      {
+        "id": "21a64923-fb66-491f-828d-c3da157e9797",
+        "line": 1,
+        "version": 419,
+        "index": 0
       }
     ]
   }
