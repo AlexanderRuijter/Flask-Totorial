@@ -12,16 +12,22 @@
       {
         "id": "1612843b-24bb-4d29-a629-bc6ac15d6248",
         "line": 1,
-        "version": 11697,
+        "version": 11795,
         "index": 0
+      },
+      {
+        "id": "f7bb5522-7f90-4827-a6e1-85f556ced036",
+        "line": 450,
+        "version": 12162,
+        "index": 7275
       }
     ],
     "templates/homePage.html": [
       {
         "id": "4e32a4bc-cef7-4a82-81da-0af74ebe5bad",
-        "line": 23,
-        "version": 1385,
-        "index": 655
+        "line": 6,
+        "version": 1442,
+        "index": 126
       }
     ],
     "templates/shop.html": [

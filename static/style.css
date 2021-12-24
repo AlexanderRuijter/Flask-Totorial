@@ -1,15 +1,17 @@
 .container {
   background-color: greenyellow;
   color: greenyellow;
-  height: 5pc;
-  width: 101%;
+  height: 4pc;
+  width: 100%;
   border: 2px solid black;
   justify-content: center;
   align-items: center;
   position: fixed;
+  text-align: center;
+  align-content: center;
   z-index: 100;
-  margin-left: -10px;
-  margin-top: -1.1em;
+  left: 0;
+  top: 0;
 }
 
 .register {
@@ -29,11 +31,11 @@
 .game-selection{
   background-color: darkgreen;
   border: 0.15em black solid;
-  height: 1.5em;
-  width: 100.70%;
-  margin-left: -10px;
-  margin-top: -0.15em;
-  position: relative;
+  height: 1.5pc;
+  width: 100%;
+  left: 0;
+  top: 4pc;
+  position: fixed;
   justify-content: last;
 }
 
@@ -75,7 +77,7 @@
   position: fixed;
   width: 100%;
   height: 30%;
-  margin-top: 44%;
+  margin-top: 35%;
   
 }
 .l_Background {
@@ -145,6 +147,11 @@ ul {
 }
 
 h3 {
+  color: yellowgreen;
+  text-align: center;
+}
+
+h2 {
   color: green;
   text-align: center;
 }
@@ -380,6 +387,7 @@ div.RandomBoxTwo{
   margin-top: -100px;
   z-index: -9;
 }
+
 .hill8 {
   margin-left: 850px;
   margin-top: -100px;
@@ -431,4 +439,55 @@ div.RandomBoxTwo{
   margin-top: -100px;
   z-index: -10;
 }
-// animatie tips: https://webplatform.github.io/docs/tutorials/css_animations/ 
+
+
+.tab button {
+  background-color: green;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 1.1pc;
+  width: 20pc;
+}
+
+.tab button:hover {
+  background-color: lightgreen;
+}
+
+.tab button.active {
+  background-color: darkgreen;
+}
+
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border-top: none;
+}
+
+.topright {
+  float: right;
+  cursor: pointer;
+  font-size: 28px;
+}
+
+.topright:hover {color: red;}
+
+.TopText {
+  position: fixed;
+  top: -0.7pc;
+  left: 45%;
+}
+
+.TopText2 {
+  position: fixed;
+  top: -0.7pc;
+  left: 36%;
+}
+
+.registerButton {
+  position: relative;
+  background-color: green;
+  width: 100%;
+}
